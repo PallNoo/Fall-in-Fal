@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub - Digital Game Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#" class="logo">🎮 GAME<span>HUB</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#store">Store</a>
+            <a href="#store">Games</a>
+        </nav>
+
+        <button class="cart-button" id="cartButton">
+            🛒 Troli <span id="cartCount">0</span>
+        </button>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">YOUR NEXT ADVENTURE STARTS HERE</p>
+            <h1>Dunia Gaming<br><span>Tanpa Had.</span></h1>
+            <p>
+                Temui game kegemaran anda dengan tawaran
+                hebat hanya di GameHub.
+            </p>
+            <a href="#store" class="primary-button">Terokai Game</a>
+        </div>
+        <div class="hero-art">
+            <div class="hero-orb">🎮</div>
+            <div class="hero-tag">LEVEL UP YOUR GAME</div>
+        </div>
+    </section>
+
+    <!-- STORE -->
+    <main class="store" id="store">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">GAME COLLECTION</p>
+                <h2>Jelajahi Game</h2>
+            </div>
+            <span id="gameCount" class="game-count"></span>
+        </div>
+
+        <div class="toolbar">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="🔍 Cari nama game..."
+                aria-label="Cari game"
+            >
+
+            <select id="categoryFilter" aria-label="Pilih kategori">
+                <option value="Semua">Semua kategori</option>
+                <option value="Action">Action</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Racing">Racing</option>
+                <option value="RPG">RPG</option>
+                <option value="Sports">Sports</option>
+            </select>
+
+            <select id="sortFilter" aria-label="Susun game">
+                <option value="default">Susunan asal</option>
+                <option value="low">Harga terendah</option>
+                <option value="high">Harga tertinggi</option>
+                <option value="name">Nama A-Z</option>
+            </select>
+        </div>
+
+        <div class="game-grid" id="gameGrid"></div>
+
+        <p id="emptyMessage" class="empty-message" hidden>
+            Tiada game ditemui. Cuba carian lain.
+        </p>
+    </main>
+
+    <!-- CART DRAWER -->
+    <div class="overlay" id="cartOverlay"></div>
+
+    <aside class="cart-panel" id="cartPanel" aria-label="Troli anda">
+        <div class="cart-header">
+            <h2>Troli Anda</h2>
+            <button id="closeCart" class="icon-button"
+                aria-label="Tutup troli">✕</button>
+        </div>
+
+        <div id="cartItems" class="cart-items"></div>
+
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Jumlah</span>
+                <strong id="cartTotal">RM 0.00</strong>
+            </div>
+            <button id="checkoutButton" class="primary-button checkout">
+                Teruskan Pembelian
+            </button>
+            <p class="small-note">
+                Demo sahaja. Tiada pembayaran sebenar diproses.
+            </p>
+        </div>
+    </aside>
+
+    <footer>
+        <a href="#" class="logo">GAME<span>HUB</span></a>
+        <p>© 2026 GameHub. Projek demo kedai game digital.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
